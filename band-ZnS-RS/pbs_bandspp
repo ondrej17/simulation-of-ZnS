@@ -1,0 +1,10 @@
+#!/bin/bash
+#PBS -l nodes=hartree:ppn=4,walltime=1:00:00
+#PBS -N ZnS-RS-bandspp
+#PBS -j oe
+#PBS -V
+source /opt/intel/bin/compilervars.sh intel64
+cd $PBS_O_WORKDIR
+/home/s/root/bin/mpirun -np 4 /home/toth/Software/qe.6.3.0/bin/bands.x < ZnS-RS.bandspp.in > ZnS-RS.bandspp.out
+# plot bands to bands-ZnS-RS.png file
+python qe_bands_plot.py
