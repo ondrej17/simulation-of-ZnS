@@ -1,0 +1,34 @@
+ &control
+    calculation  = 'scf'
+    prefix       = 'ZnS-RS',
+    outdir       = 'outdir'
+    pseudo_dir   = '~/Documents/quantum_simulations/PP_eff'
+    restart_mode = 'from_scratch',
+    tstress      = .true.
+    tprnfor      = .true.
+ /
+ &system
+    ibrav        = 0,
+    celldm(1)    = 9.14565,
+    nat       	= 2, 			! number of atoms in the unit cell
+    ntyp      	= 2,			! number of types of atoms in the unit cell
+    ecutwfc   	= 30,			! kinetic energy cutoff (Ry) for wavefunctions
+ /
+ &electrons
+    diagonalization = 'david'
+    mixing_mode     = 'plain'
+    mixing_beta     = 0.4,
+    conv_thr        = 1.0d-6,
+ /
+CELL_PARAMETERS {alat}
+  0.500000000000000   0.500000000000000   0.000000000000000 
+  0.500000000000000   0.000000000000000   0.500000000000000 
+  0.000000000000000   0.500000000000000   0.500000000000000 
+ATOMIC_SPECIES
+ Zn 65.38000 Zn_pbe_v1.uspp.F.UPF
+ S  32.06750 s_pbe_v1.4.uspp.F.UPF
+ATOMIC_POSITIONS {crystal}
+ Zn 0 0 0
+ S  0.5 0.5 0.5
+K_POINTS automatic
+ $KPOINTS$ $KPOINTS$ $KPOINTS$ 0 0 0

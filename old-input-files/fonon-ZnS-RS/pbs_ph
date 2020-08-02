@@ -1,0 +1,8 @@
+#!/bin/bash
+#PBS -l nodes=hartree:ppn=4,walltime=1:00:00
+#PBS -N ZnS-RS-ph
+#PBS -j oe
+#PBS -V
+source /opt/intel/bin/compilervars.sh intel64
+cd $PBS_O_WORKDIR
+/home/s/root/bin/mpirun -np 4 /home/toth/Software/qe.6.3.0/bin/ph.x < ZnS-RS.ph.in > ZnS-RS.ph.out
