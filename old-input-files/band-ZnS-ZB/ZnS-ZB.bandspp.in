@@ -1,6 +1,0 @@
- &bands
-    prefix      = 'ZnS-ZB',
-    outdir      = 'outdir',
-    filband		= 'ZnS-ZB.bands'
-    no_overlap 	= .true.,
- /

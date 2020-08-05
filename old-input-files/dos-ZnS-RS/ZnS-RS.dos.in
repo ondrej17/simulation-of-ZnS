@@ -1,8 +1,0 @@
-&dos
-  outdir   = "outdir",
-  prefix   = "ZnS-RS"
-  fildos   = "ZnS-RS.dos",
-  Emin     = -10.0,
-  Emax     = 20.0,
-  DeltaE   = 0.05
-/
