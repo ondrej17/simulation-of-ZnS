@@ -1,0 +1,9 @@
+#!/bin/bash
+#PBS -l nodes=hartree:ppn=4,walltime=1:00:00
+#PBS -N ZnS-ZB-scf
+#PBS -j oe
+#PBS -u bily
+#PBS -V
+source /opt/intel/bin/compilervars.sh intel64
+cd $PBS_O_WORKDIR
+/home/s/root/bin/mpirun -np 4 /home/toth/Software/qe.6.3.0/bin/pw.x < ZnS-ZB.scf.in > ZnS-ZB.scf.out
