@@ -37,9 +37,11 @@ def get_H_p(folder):
 line_param = []
 
 # plot two lines for each phase
+#for color_point, color_line, folder in [("bs", "b", "../vc-relax-ZnS-RS-around-trans"), 
+#										("ro", "r", "../vc-relax-ZnS-ZB-around-trans")]:
 for color_point, color_line, folder in [("bs", "b", "../vc-relax-ZnS-RS"), 
 										("ro", "r", "../vc-relax-ZnS-ZB")]:
-	label = folder[-6:]
+	label = folder[12:18]
 	print(label)
 	pH = get_H_p(folder)
 	

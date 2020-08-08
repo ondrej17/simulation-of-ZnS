@@ -1,7 +1,7 @@
  &control
     calculation   = 'vc-relax'
     restart_mode  = 'from_scratch',
-    prefix        = 'ZnS-RS',
+    prefix        = 'ZnS-ZB',
     tstress       = .true.
     tprnfor       = .true.
     outdir        = 'outdir'
@@ -9,11 +9,11 @@
     forc_conv_thr = 1.0d-4,
  /
  &system
-    ibrav        = 0,
-    celldm(1)    = 9.14565,
-    nat          = 2,
-    ntyp         = 2,
-    ecutwfc      = 80,      ! add energy cutoff from 'encut-test'
+    ibrav         = 0
+    celldm(1)     = 9.66105
+    nat           = 2,
+    ntyp          = 2,
+    ecutwfc       = 80,       ! add energy cutoff from 'encut-test'
  /
  &electrons
     diagonalization = 'david'
@@ -25,17 +25,17 @@
     ion_dynamics  = 'bfgs',
  /
  &cell
-    press = 200.0       ! RS at 20 GPa is stable
+    press = $PRESS$
  /
 CELL_PARAMETERS {alat}
-  0.500000000000000   0.500000000000000   0.000000000000000 
-  0.500000000000000   0.000000000000000   0.500000000000000 
-  0.000000000000000   0.500000000000000   0.500000000000000 
+   0.527142281   0.527142281   0.000000000
+   0.527142281  -0.000000000   0.527142281
+  -0.000000000   0.527142281   0.527142281
 ATOMIC_SPECIES
  Zn 65.38000 Zn_pbe_v1.uspp.F.UPF
  S  32.06750 s_pbe_v1.4.uspp.F.UPF
 ATOMIC_POSITIONS {crystal}
  Zn 0 0 0
- S  0.5 0.5 0.5
+ S  0.25 0.25 0.25
 K_POINTS automatic
- 8 8 8 0 0 0               ! add number of k-points from kpoints-test
+ 8 8 8 0 0 0                 ! add number of k-points from 'kpoints-test'

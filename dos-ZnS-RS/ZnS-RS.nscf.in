@@ -3,8 +3,8 @@
     prefix       = 'ZnS-RS',
     outdir       = 'outdir'
     pseudo_dir   = '~/Documents/quantum_simulations/PP_eff'
-    tstress      = .false.,
-    tprnfor      = .false.,
+    tstress      = .true.,
+    tprnfor      = .true.,
     verbosity    = 'low'
     disk_io      = 'low'
  /
@@ -25,9 +25,9 @@
     conv_thr        = 1.0d-8,
  /
 CELL_PARAMETERS {alat}
-   0.527142281   0.527142281   0.000000000
-   0.527142281  -0.000000000   0.527142281
-  -0.000000000   0.527142281   0.527142281
+   0.499810140   0.499810140   0.000000000
+   0.499810140   0.000000000   0.499810140
+   0.000000000   0.499810140   0.499810140
 ATOMIC_SPECIES
  Zn 65.38000 Zn_pbe_v1.uspp.F.UPF
  S  32.06750 s_pbe_v1.4.uspp.F.UPF
