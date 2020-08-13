@@ -27,7 +27,7 @@ for color, folder in [("bs-", "../encut-test-ZnS-RS"), ("ro-", "../encut-test-Zn
     plt.plot(results[0],results[1],color,linewidth=2, label=folder[-6:])
 
 plt.xlabel('ecutwfc [Ry]')
-plt.ylabel('Structure energy [Ry]')
+plt.ylabel('energia [Ry]')
 plt.legend()
 plt.tight_layout()
 plt.savefig("encut-ZnS.png")

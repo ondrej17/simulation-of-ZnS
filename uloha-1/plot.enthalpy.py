@@ -37,10 +37,10 @@ def get_H_p(folder):
 line_param = []
 
 # plot two lines for each phase
-#for color_point, color_line, folder in [("bs", "b", "../vc-relax-ZnS-RS-around-trans"), 
-#										("ro", "r", "../vc-relax-ZnS-ZB-around-trans")]:
-for color_point, color_line, folder in [("bs", "b", "../vc-relax-ZnS-RS"), 
-										("ro", "r", "../vc-relax-ZnS-ZB")]:
+for color_point, color_line, folder in [("bs", "b", "../vc-relax-ZnS-RS-around-trans"), 
+										("ro", "r", "../vc-relax-ZnS-ZB-around-trans")]:
+#for color_point, color_line, folder in [("bs", "b", "../vc-relax-ZnS-RS"), 
+#										("ro", "r", "../vc-relax-ZnS-ZB")]:
 	label = folder[12:18]
 	print(label)
 	pH = get_H_p(folder)
@@ -65,8 +65,8 @@ for color_point, color_line, folder in [("bs", "b", "../vc-relax-ZnS-RS"),
 				color_line,
 				label="{}: H={}*p{}".format(label, slope.round(7), intercept.round(4)))
 
-plt.xlabel('Pressure [GPa]')
-plt.ylabel('Enthalpy [Ry]')
+plt.xlabel('tlak [GPa]')
+plt.ylabel('entalpia [Ry]')
 plt.legend()
 plt.tight_layout()
 plt.savefig("enthalpy-vs-pressure.png")

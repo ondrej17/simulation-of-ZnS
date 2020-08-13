@@ -8,10 +8,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # LaTeX text rendering
-font = {'family' : 'serif',
-        'size'   : 15}
-plt.rc('font', **font)
-plt.rc('text', usetex=True)
+#font = {'family' : 'serif',
+#        'size'   : 12}
+#plt.rc('font', **font)
 plt.figure(num=None, figsize=(6.4, 4.8), dpi=600, facecolor='w', edgecolor='k')
 
 # load DOS data
@@ -32,5 +31,5 @@ plt.plot(energy-E_Fermi,dos,color='black',lw=0.2)
 ylim = plt.ylim()
 plt.vlines(0,ylim[0],ylim[1],colors='#66ccff',linestyles='solid',lw = 0.2)
 plt.xlabel(r'$E-E_F$ [eV]')
-plt.ylabel(r'density of states')
+plt.ylabel(r'hustota stavov')
 plt.savefig("dos-ZnS-ZB.png")

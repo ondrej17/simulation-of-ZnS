@@ -26,8 +26,8 @@ for color, folder in [("bs-", "../kpoints-test-ZnS-RS"), ("ro-", "../kpoints-tes
 
     plt.plot(results[0],results[1],color,linewidth=2, label=folder[-6:])
 
-plt.xlabel('N in (N,N,N) grid')
-plt.ylabel('Structure energy [Ry]')
+plt.xlabel('N v (N,N,N) mriežke')
+plt.ylabel('energia [Ry]')
 plt.legend()
 plt.tight_layout()
 plt.savefig("kpoints-ZnS.png")

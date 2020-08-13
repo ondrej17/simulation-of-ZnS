@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 import matplotlib
 matplotlib.use('Agg')
 
@@ -46,10 +44,10 @@ v_calc = np.linspace(V[0],V[-1],101)
 p_calc = eos(v_calc,*popt)
 
 plt.plot(p,V,'bo',label='vc-relax-ZnS-RS data')
-plt.plot(p_calc,v_calc,'r-',label='fit: B={:.3f}, B\'={:.3f}'.format(*popt))
+plt.plot(p_calc,v_calc,'r-',label='fit: B={:.3f} GPa, B\'={:.3f}'.format(*popt))
 
-plt.xlabel('Pressure [GPa]')
-plt.ylabel('Volume [A^3]')
+plt.xlabel('tlak [GPa]')
+plt.ylabel('objem [A^3]')
 plt.legend()
 plt.tight_layout()
 plt.savefig("bulk-fit-ZnS-RS.png")

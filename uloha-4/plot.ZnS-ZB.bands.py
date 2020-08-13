@@ -62,10 +62,9 @@ def read_bnd(file_name):
 
 def plot(bands, x, x_label_pos, fermi):
     # setup plot
-    font = {'family' : 'serif',
-            'size'   : 15}
-    plt.rc('font', **font)
-    plt.rc('text', usetex=True)
+    #font = {'family' : 'DejaVu Sans',
+    #        'size'   : 12}
+    #plt.rc('font', **font)
     plt.figure(num=None, figsize=(6.4, 4.8), dpi=600, facecolor='w', edgecolor='k')
 
     # calculate plot bounds
@@ -85,7 +84,7 @@ def plot(bands, x, x_label_pos, fermi):
     # add information to graph
     plt.xlim(xaxis)
     plt.ylim(yaxis)
-    plt.xlabel(r'k-path')
+    #plt.xlabel(r'k-path')
     plt.ylabel(r'$E-E_F$ [eV]')
     plt.savefig('bands-ZnS-ZB.png')
 

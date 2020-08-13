@@ -2,7 +2,7 @@ phonons of ZnS-ZB at Gamma point
  &inputph
   tr2_ph   = 5.0d-16,
   prefix   = 'ZnS-ZB',
-  epsil    = .false.,
+  epsil    = .true.,
   trans    = .true.,
   asr      = .true.
   amass(1) = 65.380,                    ! mass of Zn

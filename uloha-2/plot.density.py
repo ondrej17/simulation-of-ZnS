@@ -39,9 +39,9 @@ def get_rho_p(folder):
 line_param = []
 
 # plot two lines for each phase
-for color_point, color_line, folder in [("bs", "b", "../vc-relax-ZnS-RS"), 
-                                        ("ro", "r", "../vc-relax-ZnS-ZB")]:
-    label = folder[-6:]
+for color_point, color_line, folder in [("bs", "b", "../vc-relax-ZnS-RS-around-trans"), 
+                                        ("ro", "r", "../vc-relax-ZnS-ZB-around-trans")]:
+    label = folder[12:18]
     prho = get_rho_p(folder)
     
     p = prho[:,0]/10    # GPa
@@ -63,8 +63,8 @@ for color_point, color_line, folder in [("bs", "b", "../vc-relax-ZnS-RS"),
                 color_line,
                 label="{}: rho={}*p+{}".format(label, slope.round(7), intercept.round(4)))
             
-plt.xlabel('Pressure [GPa]')
-plt.ylabel('Density [g/cm^3]')
+plt.xlabel('tlak [GPa]')
+plt.ylabel('hustota [g/cm^3]')
 plt.legend()
 plt.tight_layout()
 plt.savefig("density-vs-pressure.png")
@@ -85,8 +85,8 @@ plt.plot(   p_calc, rho_calc,
             'blue',
             label="rel_rho={}*p+{}".format(slope.round(8), intercept.round(5)))
             
-plt.xlabel('Pressure [GPa]')
-plt.ylabel('Relative density')
+plt.xlabel('tlak [GPa]')
+plt.ylabel('relatívna hustota')
 plt.legend()
 plt.tight_layout()
 plt.savefig("rel-density-vs-pressure.png")
